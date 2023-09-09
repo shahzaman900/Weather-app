@@ -64,7 +64,7 @@ function Weather() {
       </div>
       <div className="bg-pink-500 py-12 px-4 justify-evenly flex items-center">
         <img src={world} width={200} alt="" />
-        <h2 className="text-3xl text-white">World Weather</h2>
+        <h2 className="text-xl font-extrabold text-white">World Weather</h2>
       </div>
       <div className="w-screen flex flex-wrap">
         {
@@ -84,7 +84,7 @@ function Weather() {
                       <img className="w-8 h-min" src="https://img.icons8.com/ios/50/ffffff/circled-right.png" alt="Cloud" />
                     </div>
                     <div>
-                      <h1 className="text-3xl text-white text-right">{country.name}</h1>
+                      <h1 className="text-xl  font-extrabold text-white text-right">{country.name}</h1>
                       <p className="my-2 text-right text-sm text-white">
                         <span>Temp </span>
                         {Math.round(country.main.temp)}

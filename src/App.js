@@ -2,7 +2,6 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Weather from './component/weather';
 import CityDetail from './component/cityDetail';
-// import CityDetail from './component/cityDetail';
 
 function App() {
   return (

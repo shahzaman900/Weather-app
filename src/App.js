@@ -3,8 +3,7 @@ import Weather from './component/weather';
 
 function App() {
   return (
-    <div className="App">
-      <h1>shah</h1>
+    <div className="App flex flex-col">
       <Weather />
     </div>
   );

@@ -31,8 +31,8 @@ function Weather() {
     setSearch(e.target.value);
   };
 
-  const searchedCountry = weather.filter((data) => {
-    const country = data.name.toLowerCase();
+  const searchedCountry = weather.filter((countrydata) => {
+    const country = countrydata.name.toLowerCase();
     const find = search.toLowerCase();
     return country.includes(find);
   });

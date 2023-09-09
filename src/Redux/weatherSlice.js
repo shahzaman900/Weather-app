@@ -43,9 +43,16 @@ const cityWeatherSlice = createSlice({
       .addCase(getWeatherData.fulfilled, (state, action) => {
         state.status = 'Date Loeaded';
         state.weather = action.payload;
+      })
+      .addCase(getWeatherData.pending, (state, action) => {
+        state.status = 'data not loaded';
+        state.status = action.payload;
       });
   },
 });
+
+export const selectedWeatherData = (state) => state.weather.weather;
+export const selectWeatherStatus = (state) => state.weather.status;
 
 export const selectedCrountry = (state, country) => state.weather.weather.find(
   (city) => city.name === country,

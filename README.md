@@ -152,7 +152,7 @@ npx stylelint "**/*.{css,scss}"
 
 -   Project Demo: [Project Demo](https://weather-app-wd6h.onrender.com/)
 
--   Project Presentation: [Project Presentation](https://www.loom.com/share/4ff03983705c4f3eba72037b1e7b50ab?sid=f2a497a6-f438-49fb-825f-c5e23630f22b)
+-   Project Presentation: [ProjectPresentation](https://www.loom.com/share/4ff03983705c4f3eba72037b1e7b50ab?sid=f2a497a6-f438-49fb-825f-c5e23630f22b)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

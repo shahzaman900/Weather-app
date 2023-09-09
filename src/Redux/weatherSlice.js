@@ -1,14 +1,13 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 const countries = [
-  'Islamabad',
-  'London',
-  'Germany',
-  'Karachi',
-  'Peshawar',
-  'Multan',
-  'Lahore',
-  'Australie',
+  'Afghanistan',
+  'China',
+  'India',
+  'Iran',
+  'Nepal',
+  'Pakistan',
+  'Tajikistan',
 ];
 
 export const getWeatherData = createAsyncThunk(

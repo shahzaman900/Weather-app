@@ -1,9 +1,9 @@
 /* eslint-disable arrow-body-style */
+import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getWeatherData } from '../Redux/weatherSlice';
 import world from '../img/world.png';
-// import countriesFlag, { world } from '../img';
 import afghanistan from '../img/af.png';
 import china from '../img/china.png';
 import india from '../img/india.png';
@@ -17,13 +17,13 @@ function Weather() {
   const { weather, status, error } = useSelector((state) => state.weather);
 
   const countryImages = {
-    Islamabad: afghanistan,
-    London: china,
-    Germany: india,
-    Karachi: iran,
-    Peshawar: nipal,
-    Multan: pakistan,
-    Lahore: tajikistan,
+    Afghanistan: afghanistan,
+    China: china,
+    Innichen: india,
+    Iran: iran,
+    Nepal: nipal,
+    Pakistan: pakistan,
+    Tajikistan: tajikistan,
   };
 
   useEffect(() => {
@@ -54,18 +54,30 @@ function Weather() {
         {
           weather.map((country) => {
             return (
-              <div key={country.name} className="bg-pink-600 p-4 w-1/3 h-72">
-                <div>
-                  {countryImages[country.name] && (
-                    <img
-                      src={countryImages[country.name]}
-                      alt={country.name}
-                      width={120}
-                    />
-                  )}
-                  <img className="absolute top-4 right-4" width={30} src="https://img.icons8.com/ios/50/ffffff/circled-right.png" alt="Cloud" />
-                </div>
-                <h1>{country.name}</h1>
+              <div key={country.name} className="w-1/3 border border-slate-300 bg-pink-600 even:bg-pink-500 ">
+                <Link to={`/city/${country.name}`}>
+                  <div className="p-4 h-72 flex flex-col justify-between">
+                    <div className="flex justify-between">
+                      {countryImages[country.name] && (
+                        <img
+                          src={countryImages[country.name]}
+                          alt={country.name}
+                          width={120}
+                        />
+                      )}
+                      <img className="w-8 h-min" src="https://img.icons8.com/ios/50/ffffff/circled-right.png" alt="Cloud" />
+                    </div>
+                    <div>
+                      <h1 className="text-3xl text-white text-right">{country.name}</h1>
+                      <p className="my-2 text-right text-sm text-white">
+                        <span>Temp </span>
+                        {Math.round(country.main.temp)}
+                        {' '}
+                        °C
+                      </p>
+                    </div>
+                  </div>
+                </Link>
               </div>
             );
           })

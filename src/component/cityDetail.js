@@ -15,9 +15,6 @@ import tajikistan from '../img/tj.png';
 const CityDetail = () => {
   const { cityName } = useParams();
   const country = useSelector((state) => selectedCrountry(state, cityName));
-  // const {
-  //   id, name, main, wind, weather,
-  // } = country;
 
   const countryImages = {
     Afghanistan: afghanistan,

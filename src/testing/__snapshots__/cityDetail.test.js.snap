@@ -206,3 +206,5 @@ Object {
   "unmount": [Function],
 }
 `;
+
+exports[`testing country detail should render correct country name  1`] = `Promise {}`;

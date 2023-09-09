@@ -70,7 +70,7 @@ function Weather() {
         {
           searchedCountry.map((country) => {
             return (
-              <div key={country.name} className="w-1/3 border border-slate-300 bg-pink-600 even:bg-pink-500 ">
+              <div key={country.name} className="md:w-1/3 w-1/2 border border-slate-300 bg-pink-600 even:bg-pink-500 ">
                 <Link to={`/city/${country.name}`}>
                   <div className="p-4 h-72 flex flex-col justify-between">
                     <div className="flex justify-between">
